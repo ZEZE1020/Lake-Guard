@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash, jso
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from sqlalchemy.exc import IntegrityError
+from dotenv import load_dotenv 
+import os
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
@@ -22,7 +24,7 @@ class User(UserMixin, db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-API_KEY = 'vai-q1i8N7YR42ML78MkPAyp357B2Yp5i74i'
+api_key = os.getenv('API_KEY')
 BASE_TRANSLATE_URL = 'https://api.vambo.ai/v1/translate/text'
 BASE_IDENTIFY_URL = 'https://api.vambo.ai/v1/identify/text'
 
