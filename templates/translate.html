@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Lake Guardian Initiative Language Translator</h1>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <section id="translator">
+            <h2>Translate Text</h2>
+            <form id="translate-form">
+                <textarea id="text-to-translate" name="text" rows="4" cols="50" placeholder="Enter text to translate" required></textarea>
+                <label for="lang-select">Select Language:</label>
+                <select id="lang-select" name="lang" required>
+                    <option value="aeb">Arabic (Tunisian)</option>
+                    <option value="afr">Afrikaans</option>
+                    <option value="amh">Amharic</option>
+                    <option value="arb">Arabic (Modern Standard)</option>
+                    <option value="arz">Arabic (Egyptian)</option>
+                    <option value="eng">English</option>
+                    <option value="fra">French</option>
+                    <option value="sna">Shona</option>
+                    <option value="swh">Swahili (Coastal)</option>
+                    <option value="xho">Xhosa</option>
+                    <option value="zul">Zulu</option>
+                </select>
+                <button type="submit">Translate</button>
+            </form>
+            <div id="translated-text"></div>
+        </section>
+        <section id="lang-identification">
+            <h2>Identify Language</h2>
+            <form id="identify-form">
+                <textarea id="text-to-identify" name="text" rows="4" cols="50" placeholder="Enter text to identify language" required></textarea>
+                <button type="submit">Identify Language</button>
+            </form>
+            <div id="identified-lang"></div>
+        </section>
+    </main>
+</body>
+</html>

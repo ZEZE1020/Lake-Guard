@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ user.username }}</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dashboard</h2>
+            {% if user.role == 'Fishermen' %}
+                <h3>Fishermen Dashboard</h3>
+                <p>Monitor fish populations, water quality, receive real-time weather updates, report catches and illegal activities, access training and educational materials.</p>
+            {% elif user.role == 'Fishmongers' %}
+                <h3>Fishmongers Dashboard</h3>
+                <p>Track inventory, manage sales, monitor fish quality, communicate with suppliers and customers.</p>
+            {% elif user.role == 'LawEnforcers' %}
+                <h3>Law Enforcers Dashboard</h3>
+                <p>Monitor fishing activities, enforce regulations, analyze data, coordinate with stakeholders.</p>
+            {% elif user.role == 'SystemAdmins' %}
+                <h3>System Administrators Dashboard</h3>
+                <p>Manage user accounts, oversee data security, ensure system operation and maintenance.</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

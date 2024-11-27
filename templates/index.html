@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Guardian Initiative</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Lake Guardian Initiative</h1>
+        <p>Protecting Our Lake, Preserving Our Future</p>
+    </header>
+    <main>
+        <section>
+            <h2>About the Project</h2>
+            <p>The Lake Guardian Initiative aims to restore and safeguard Lake Victoria's ecosystem through innovative technology, sustainable practices, stakeholder inclusivity, and community engagement.</p>
+            <h3>Background</h3>
+            <p>The communities around Lake Victoria, Kenya, are facing a critical decline in fish landings due to climate change, overfishing, pollution, and inadequate enforcement of fishing regulations. This has led to degraded water quality, disrupted fishing activities, and depleted fish stocks, threatening the livelihoods of the local population.</p>
+            <img src="{{ url_for('static', filename='images/imas.jpg') }}" alt="Lake Victoria">
+            <p><a href="{{ url_for('about') }}">Learn More About Lake Guardian</a></p>
+        </section>
+        <section>
+            <h2>Get Involved</h2>
+            <p><a href="{{ url_for('signup') }}">Sign Up</a> or <a href="{{ url_for('login') }}">Log In</a> to access the dashboard and more features.</p>
+        </section>
+        <section> 
+            <h2>Translate Text</h2> 
+            <p>Use the translator to make the project information accessible in multiple languages.</p>
+            <p> The Translator Utilises <strong>Vambo AI</strong>
+            <p><a href="{{ url_for('translate') }}">Go to Translator</a></p>
+        </section>
+        <section>
+            <h2>Objectives</h2>
+            <ul>
+                <li>Real-Time Monitoring with AI</li>
+                <li>Encourage Sustainable Fishing Practices</li>
+                <li>PromotePollution Control</li>
+                <li>Develop Resilient Infrastructure</li>
+                <li>Community Engagement</li>
+                <li>Data-Driven Decision-Making</li>
+                <li>Stakeholder inclusivity</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Real-Time Monitoring</li>
+                <li>Predictive Analysis Using LLMs</li>
+                <li>Sustainable Fishing Practices</li>
+                <li>Pollution Control</li>
+                <li>Community Engagement</li>
+            </ul>
+            <section>
+            <h2>Technologies to be Employed</h2>
+            <h3>APIs<h3>
+            <ul>
+                <li>Community Engagement Technologies: Vambo AI for providing multilingual identification and Translation</li>
+                <li>Artificial Intelligence: OnDeck Fisheries AI for species identification and monitoring fishing activities</li>
+                <li>Satellite Imagery and Remote Sensing</li>
+            </ul>
+        
+            <h3>IOT<h3>
+            <ul>
+                <li>Water Quality Sensors: Measure parameters like pH, temperature, dissolved oxygen, and turbidity to monitor water quality in real time.</li>
+                <li>Satellite Imagery and Remote Sensing</li>
+            </ul>
+        </section>
+        </section>
+        <section>
+            <h2>Expected Outcome</h2>
+            <ul>
+                <li>Improved fish populations and water quality in Lake Victoria.</li>
+                <li>Sustainable fishing practices adopted by local communities.</li>
+                <li>Enhanced resilience of fishing communities through robust infrastructure.</li>
+                <li>Increased community engagement and awareness of conservation efforts.</li>
+                <li>Community Engagement</li>
+                <li>Data-driven decision-making leads to more effective resource management.</li>
+                <li>Improved Living standards of local communities</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
