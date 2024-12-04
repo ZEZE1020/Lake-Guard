@@ -1,9 +1,0 @@
-Flask              3.1.0
-Flask-Login        0.6.3
-Flask-SQLAlchemy   3.1.1
-gunicorn           23.0.0
-pip                22.0.2
-python-dotenv      1.0.1
-requests           2.32.3
-SQLAlchemy         2.0.36
-wheel              0.45.1'
