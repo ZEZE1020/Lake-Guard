@@ -1,0 +1,9 @@
+flask              
+flask-login        
+flask-SQLAlchemy   
+gunicorn           
+pip               
+python-dotenv      
+requests           
+SQLAlchemy         
+wheel              
