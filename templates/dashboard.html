@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
     <header>
         <h1>Welcome, {{ user.username }}</h1>
         <nav>
-            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('/') }}">Home</a>
             <a href="{{ url_for('logout') }}">Logout</a>
         </nav>
     </header>
