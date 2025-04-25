@@ -1,7 +1,7 @@
 # Lake Guard
 
 ## Project Description
-Lake Guard is a Flask-based application designed to monitor and protect the ecosystem of Lake Victoria. The project utilizes advanced technologies, including the Vambo Multilingual API, to provide real-time environmental data and insights.
+Lake Guard is a Flask-based application designed to monitor and protect the ecosystem of Lake Victoria. The project utilises advanced technologies, including the Vambo Multilingual API, to provide real-time environmental data and insights.
 
 ## Key Features
 
@@ -38,4 +38,4 @@ Lake Guard is a Flask-based application designed to monitor and protect the ecos
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/lake-guard.git
+   git clone https://github.com/ZEZE1020/lake-guard.git
